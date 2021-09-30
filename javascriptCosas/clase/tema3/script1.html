@@ -28,7 +28,7 @@
 
         */
         //codigo 2
-
+        /*
         do {
             //PIDE UNA VALOR POR TECLADO
             var nota =prompt("introduce tu nota");
@@ -64,6 +64,29 @@
                 }
             }
         } while (nota!=undefined);
+        */
+
+        //codigo 3//
+
+
+        //declaramos una variable donde vamos a concatenar las cadenas
+        var resultado = "";
+        //bucle do while para introducir varias cadenas
+        do {
+            //pedimos la cadena por teclado
+            var cadena = prompt("introduce una cadena");
+            //si la variable resultado está vacia
+            if (resultado==""){
+                //concatenamos sin usar guion
+                resultado = resultado+cadena;
+            }
+            else{
+                //si no usamos guion
+                resultado = resultado + "-" + cadena;
+            }
+            //continua mientra se pulse el botón
+        } while (confirm("deseas seguir?"));
+        
     </script>
 </body>
 </html>
