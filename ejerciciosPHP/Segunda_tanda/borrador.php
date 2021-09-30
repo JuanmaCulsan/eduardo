@@ -44,7 +44,7 @@
         echo "se ha seleccionado el loro"."<br>";
     }
     else {
-        echo "no se ha seleccionado ni perro, ni gato, ni loro"; 
+        echo "no se ha seleccionado ni perro, ni gato, ni loro"."<br>"; 
     }
 
 
@@ -63,7 +63,7 @@
             echo "se ha seleccionado el loro"."<br>";
             break;
         default:
-            echo "no se ha seleccionado ni perro, ni gato, ni loro";
+            echo "no se ha seleccionado ni perro, ni gato, ni loro"."<br>";
             break;
     }
 
