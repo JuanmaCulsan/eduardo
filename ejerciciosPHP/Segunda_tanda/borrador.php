@@ -3,14 +3,64 @@
 
     /*   EJERCICIO 1   */
 
+    /*
     $ejer1 = $_GET["booleano"];
 
-    if ($ejer1 =="v1") {
+    if ($ejer1 =="true") {
         echo "verdadero"."<br>";
     }
     else{
         echo "falso"."<br>";
     }
+    */
+
+    //EJERCICIO 1 CORRECCIÓN
+    /*
+    if (empty($ent1)) {
+        echo "Debes introducir algo";
+    }
+    //Si no está vacia entro aquí
+    else {
+        if (strtolower($ent1)=="true") {
+            echo "Verdadero";
+        }
+        elseif (strtolower($ent1)=="false") {
+            echo "Falso";
+        }
+        else{
+            echo "Eso no vale";
+        }
+    }
+
+
+    ----------------------------
+
+    function str_to_boolean($ent2){
+        $bool = array(
+            "true"=true,
+            "false"=false
+        );
+
+        return $bool[$ent2];
+    }
+    
+    $b str_to_boolean($ent2);
+    
+    -----------------------------------------------------
+
+    OTRO EJEMPLO
+
+    */
+    $ejer1 = $_GET["booleano"];
+    function str_to_bool2($ejer1) {
+ 
+        return Array(
+            "true" => true,
+            "false" => false
+        )[$ejer1];
+ 
+    }
+    $b = str_to_bool2($ejer1);
 
     /*   EJERCICIO 2   */
 
@@ -50,7 +100,7 @@
 
     /*   EJERCICIO 4   */
 
-    $ejer4 = $_GET["animal_4"];
+    $ejer4 = strtolower($_GET["animal_4"]);
 
     switch ($ejer4) {
         case "gato":
@@ -94,4 +144,73 @@
         echo "valor incorrecto"."<br>";
     }
 
+    /*   EJERCICIO 6   */
+    $ent4 = strtolower($_GET['ent1']);
+    $ent5 = strtolower($_GET['ent2']);
+    $ent6 = strtolower($_GET['ent3']);
+
+    /*
+    $valor1 = strtolower($ent4);
+    $valor1 = strtolower($ent5);
+    $valor1 = strtolower($ent5);
+    */
+
+
+    if($ent5=="and"){
+        if ($ent4=="true" && $ent6=="true"){
+            echo "verdadero";
+        }
+        elseif (($ent4=="true" && $ent6=="false")||($ent4=="false" && $ent6=="true")){
+            echo "falso";
+        }
+        elseif ($ent4=="false" && $ent6=="false") {
+            echo "true";
+        } 
+        else{
+            echo "te has equivocado primo";
+        }
+    }
+    elseif ($ent5=="or") {
+        if ($ent4=="true" || $ent6=="true"){
+            echo "verdadero";
+        }
+        elseif (($ent4=="true" || $ent6=="false")||($ent4=="false" || $ent6=="true")){
+            echo "true";
+        }
+        elseif ($ent4=="false" || $ent6=="false") {
+            echo "falso";
+        } 
+        else{
+            echo "te has equivocado primo";
+        }
+    }
+    elseif ($ent5=="xor") {
+        if ($ent4==$ent6){
+            echo "falso";
+        }
+        elseif (($ent4=="true" && $ent6=="false")||($ent4=="false" && $ent6=="true")){
+            echo "true";
+        }
+        else{
+            echo "te has equivocado primo";
+        }
+    }
+    else {
+        echo "mongolo";
+    }
+
+
+    /*   EJERCICIO 7   */
+
+    $frase = ($_GET['frase']);
+
+    $palabras=explode(" ",$frase);
+
+    //print_r($palabras);
+
+    for ($i=0; $i < count($palabras); $i++) { 
+        echo $palabras[$i]."<br>";
+    }
+
+        
 ?>
