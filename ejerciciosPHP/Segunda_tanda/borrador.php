@@ -51,7 +51,7 @@
     OTRO EJEMPLO
 
     */
-    $ejer1 = $_GET["booleano"];
+    $ejer1 = $_POST["booleano"];
     function str_to_bool2($ejer1) {
  
         return Array(
@@ -64,7 +64,7 @@
 
     /*   EJERCICIO 2   */
 
-    $ejer2 = $_GET["num"];
+    $ejer2 = $_POST["num"];
 
     if ($ejer2>100){
         echo "el numero es mayor de 100"."<br>";
@@ -82,7 +82,7 @@
 
     /*   EJERCICIO 3   */
 
-    $ejer3 = $_GET["animal"];
+    $ejer3 = $_POST["animal"];
 
     if ($ejer3=="gato"){
         echo "se ha seleccionado el gato"."<br>";
@@ -100,7 +100,7 @@
 
     /*   EJERCICIO 4   */
 
-    $ejer4 = strtolower($_GET["animal_4"]);
+    $ejer4 = strtolower($_POST["animal_4"]);
 
     switch ($ejer4) {
         case "gato":
@@ -119,9 +119,9 @@
 
 
     /*   EJERCICIO 5   */
-    $ent1 = $_GET['entrada1'];
-    $ent2 = $_GET['entrada2'];
-    $ent3 = $_GET['entrada3'];
+    $ent1 = $_POST['entrada1'];
+    $ent2 = $_POST['entrada2'];
+    $ent3 = $_POST['entrada3'];
     $res=0;
 
     if ($ent2=="v1") {
@@ -145,9 +145,9 @@
     }
 
     /*   EJERCICIO 6   */
-    $ent4 = strtolower($_GET['ent1']);
-    $ent5 = strtolower($_GET['ent2']);
-    $ent6 = strtolower($_GET['ent3']);
+    $ent4 = strtolower($_POST['ent1']);
+    $ent5 = strtolower($_POST['ent2']);
+    $ent6 = strtolower($_POST['ent3']);
 
     /*
     $valor1 = strtolower($ent4);
@@ -202,7 +202,7 @@
 
     /*   EJERCICIO 7   */
 
-    $frase = ($_GET['frase']);
+    $frase = ($_POST['frase']);
 
     $palabras=explode(" ",$frase);
 
