@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Múltiplos 4 y 9</title>
+    <style>
+        h2{
+            text-align: center;
+        }
+        .contenedor{
+            width: 500px;
+            margin: 0 auto;
+            
+        }
+    </style>
+</head>
+<body>
+    <h2>Múltiplos de 4 y 9</h2>
+    <div class="contenedor"> <!-- Este div es para centrar todo el contenido, que quede algo más bonito -->
+
+    <script>
+        var serie_numeros = 1;
+        for (var i = serie_numeros; i<=500 ; i++){ // Hacemos un bucle para mostrar los números del 1 al 500 + un salto de línea
+            if ((i % 4 == 0) && (i % 9 == 0)){ // Si el número es múltiplo y de 4 Y 9 imprimimos el mensaje correspondiente. (Hay que dar prioridad a esta opción).
+                document.write(i + "     -> es múltiplo de 4 y 9"+ "<br>");
+                
+            }
+            else if(i%4 == 0){
+                document.write(i + "     -> es múltiplo de 4"+ "<br>"); // Si el número es sólo múltiplo de 4 imprimimos el mensaje correspondiente
+            }
+            else if(i % 9 ==0){
+                document.write(i + "     -> es múltiplo 9"+ "<br>"); // Si el número es sólo múltiplo de 9 imprimimos el mensaje correspondiente
+            }
+            else{
+                document.write(i + " <br>"); // Si el número no es múltiplo ni de 4 ni de 9, simplemente imprimimos el número
+            }
+            if (i % 5 == 0){
+                document.write("<br>"+"<hr>"+"<br>"); // En caso de que sea múltiplo de 5, primero hacemos un salto de línea, imprimimos una línea, + otro salto de línea
+            }
+
+        }
+        // Soy Juanje :D
+    </script>
+    </div>
+</body>
+</html>

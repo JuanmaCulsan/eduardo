@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        nombre1 = prompt("Nombre: ");
+        edad1 = prompt("edad: ");
+        nombre2 = prompt("Nombre: ");
+        edad2 = prompt("edad: ");
+        nombre3 = prompt("Nombre: ");
+        edad3 = prompt("edad: ");
+
+        mayor = Math.max(edad1,edad2,edad3);
+
+        if (mayor==edad1){
+            document.write(nombre1," es mayor"); 
+        }
+        else if(mayor==edad2){
+            document.write(nombre2," es mayor");
+        }
+        else{
+            document.write(nombre3," es mayor");
+        }
+    </script>
+</body>
+</html>

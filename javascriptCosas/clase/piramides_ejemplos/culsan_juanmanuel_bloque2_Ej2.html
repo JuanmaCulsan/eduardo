@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let eleccion = prompt("¿Que vas a escoger?").toLowerCase()
+        let ordenador;
+        let ale = (Math.floor(Math.random()*3)+1);
+
+        if (ale==1) {
+            ordenador="piedra";
+        }
+        else if(ale==2){
+            ordenador="papel";
+        }
+        else{
+            ordenador="tijera"
+        }
+
+        if(eleccion==ordenador){
+            document.write("Empate")
+        }
+        else{
+            if (((eleccion=="tijeras")&&(ordenador=="papel"))||((eleccion=="piedra")&&(ordenador=="tijeras"))||((eleccion=="papel")&&(ordenador=="piedra"))) {
+                document.write("felicidades jugador") 
+            }
+            else{
+                document.write("la máquina ha ganado")
+            }
+        }
+    </script>
+</body>
+</html>

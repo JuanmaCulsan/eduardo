@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var ale1=0;
+        var ale2=0;
+        var ale3=0;
+        var num=0;
+        var con=0
+
+        do {
+            num = (Math.floor(Math.random()*99)+1);
+            
+            if ((ale1!=num)&&(ale2!=num)&&ale3!=num) {
+                con++;
+                if (con==1) {
+                    ale1=num;
+                    document.write(ale1,"<br>")
+                }
+                if (con==2) {
+                    ale2=num;
+                    document.write(ale2,"<br>")
+                }
+                if (con==3) {
+                    ale3=num;
+                    document.write(ale3,"<br>")
+                }
+            }
+        } while (con<3);
+    </script>
+</body>
+</html>
