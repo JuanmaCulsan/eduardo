@@ -8,16 +8,24 @@
 </head>
 <body>
     <script>
-        let precio = prompt("Dime el precio: ");
-        let iva = prompt("Dime el IVA: ");
+        let precio = Number(prompt("Dime el precio: "));
+        let iva = Number(prompt("Dime el IVA: "));
+        let ivaprecio=Number(0);
 
-        function IvaPrecio(precio,iva){
-            
+        function precioIva(precio,iva) {
+            if(iva==null){
+                ivaprecio = precio + (precio*(21/100));
+            }
+            else{
+                ivaprecio = precio + (precio*(iva/100));
+            }
+            return ivaprecio;
         }
 
-        
+        res=precioIva(precio,iva);
 
-        
+
+        document.write("Precio con iva: " + res);
     </script>
 </body>
 </html>

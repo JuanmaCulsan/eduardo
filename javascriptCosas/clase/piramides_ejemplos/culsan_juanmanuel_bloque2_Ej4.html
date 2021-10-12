@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function random(inicio,final) {
+            let ale = Math.round((Math.random() * (final-inicio)) + inicio);
+            return ale;
+        }
+
+        let num =[];
+        let metodo=0;
+        let bool=true;
+
+        for (let i = 0; i < 100; i++) {
+            do {
+                metodo=random(1,1000);
+                for (let j = 0; j < num.length; j++) {
+                    if(metodo==num[j]){
+                        bool=false;
+                    }
+                }
+            } while (!bool);    
+            num[i]=metodo;
+        }
+
+        for(let k=0; k < num.length; k++){
+            document.write(num[i] + "<br>");
+        }
+    </script>
+</body>
+</html>
