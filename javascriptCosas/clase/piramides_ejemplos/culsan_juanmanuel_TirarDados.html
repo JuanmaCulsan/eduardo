@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let total=0;
+        let cont1=0;
+        let cont2=0;
+        let cont3=0;
+        let cont4=0;
+        let cont5=0;
+        let cont6=0;
+
+        
+          
+        function randomi(){
+            var ale = Math.floor((Math.random()*6+1));
+            return ale;
+        }
+        
+        for(i=0;i<1000;i++){
+            hola = randomi();
+            if(hola==1){
+                cont1++;
+            }
+            else if(hola==2){
+                cont2++;
+            }
+            else if(hola==3){
+                cont3++;
+            }
+            else if(hola==4){
+                cont4++;
+            }
+            else if(hola==5){
+                cont5++;
+            }
+            else{
+                cont6++
+            }
+        }
+        
+        total = cont1+cont2+cont3+cont4+cont5+cont6;
+        
+        document.write("El 1 ha salido: "+cont1+" veces <br>");
+        document.write("El 2 ha salido: "+cont2+" veces <br>");
+        document.write("El 3 ha salido: "+cont3+" veces <br>");
+        document.write("El 4 ha salido: "+cont4+" veces <br>");
+        document.write("El 5 ha salido: "+cont5+" veces <br>");
+        document.write("El 6 ha salido: "+cont6+" veces <br>");
+        document.write("<br>")
+        document.write("Total de lanzamientos del dado: " + total);
+        
+
+        
+
+        for (let i = 0; index < 1000; i++) {
+            random(); 
+        }
+    </script>
+</body>
+</html>

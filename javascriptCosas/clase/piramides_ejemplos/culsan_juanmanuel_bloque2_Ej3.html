@@ -13,11 +13,11 @@
         let ivaprecio=Number(0);
 
         function precioIva(precio,iva) {
-            if(iva==null){
-                ivaprecio = precio + (precio*(21/100));
+            if(iva>0){
+                ivaprecio = precio + (precio*(iva/100));
             }
             else{
-                ivaprecio = precio + (precio*(iva/100));
+                ivaprecio = precio + (precio*(21/100));
             }
             return ivaprecio;
         }

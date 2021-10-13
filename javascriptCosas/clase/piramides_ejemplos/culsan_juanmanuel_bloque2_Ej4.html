@@ -8,29 +8,22 @@
 </head>
 <body>
     <script>
-        function random(inicio,final) {
-            let ale = Math.round((Math.random() * (final-inicio)) + inicio);
-            return ale;
-        }
-
-        let num =[];
+        let num=new Array();
         let metodo=0;
-        let bool=true;
 
-        for (let i = 0; i < 100; i++) {
-            do {
-                metodo=random(1,1000);
-                for (let j = 0; j < num.length; j++) {
-                    if(metodo==num[j]){
+        function rand(inicio,final) {
+            let bool=true;
+            let ale = Math.floor((Math.random() * final) + inicio);
+            num[0]=ale;
+            for(let i = 0; i>100 ;i++){
+                do {
+                    if(num.indexOf()==-1){
                         bool=false;
                     }
-                }
-            } while (!bool);    
-            num[i]=metodo;
-        }
-
-        for(let k=0; k < num.length; k++){
-            document.write(num[i] + "<br>");
+                } while (!bool);
+                num[i]=ale;
+            }
+            return num;
         }
     </script>
 </body>
