@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>1. Se ofrece trabajo de desarrollador de aplicaciones Web propias, tanto Front como Back end. Buscamos un perfil de un técnico informático programador de aplicaciones que sea capaz de adaptarse a los distintos requisitos de los proyectos que estamos implementando, y que le guste aprender nuevas tecnologías.</p>
+    <p>2. Te integrarás en un equipo de desarrollo con un ambiente colaborativo, con un gran nivel humano y profesional. La libertad para utilizar nuevas tecnologías, y llevar a cabo las ideas que aportes a los proyectos te permitirá un gran crecimiento profesional. </p>
+    <p>3. Software es líder en el sector de la educación aportando soluciones para la elaboración de horarios académicos, a través de nuestro propio software. Actualmente nos encontramos en fase de crecimiento con nuevos proyectos y servicios. Si crees que esta oferta encaja con tu perfil de ingeniero/a técnico/a en informática, ¡no lo dudes e inscríbete! </p>
+    <p>4. Requisitos mínimos.</p>
+    <p>5. Aptitud para la programación y el desarrollo de aplicaciones informáticas. Con base académicas de Grado de Ingeniero o Grado Superior de FP se requiere facilidad para adaptarse y adquirir nuevos conocimientos. </p>
+
+    <script>
+    //que en el tercer párrafo haya un enlace con el texto "+ info" creado con javacript y que enlace a https://medac.es
+        var doc = document.querySelectorAll('p');
+        var hola = document.createElement('a');
+        hola.href="https://www.medac.es";
+        hola.innerHTML = "+ info";
+        doc[2].appendChild(hola);
+        
+    //inserta un párrafo de color rojo entre el tercer y el cuarto párrafos
+        var adios = document.createElement('p');
+        adios.innerHTML="aduhwauidhuawhduhahdahdhawiuh iuha uihdiahiuwdh iahdaiuhwdiu";
+        adios.style.color="red";
+        doc[2].appendChild(adios);
+
+    //elimina el segundo párrafo [1]
+        //tranformas el body en un array y llamas al primero o único en este caso el 0
+        var body = document.querySelectorAll('body')[0];
+        //eleminas el parrafo 2 llamando a la función de querry
+        body.removeChild(doc[1]);
+
+
+    </script>
+</html>
