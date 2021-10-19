@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--En el mismo archivo HTML y JS
+    a) al pulsar un botón pido dos números al usuario, muestro su suma, resta, multiplicación (con alert o console.log)
+    b) al pulsar "jugar" ------- se ejecuta el juego de adivinar el número
+    c) pulsar el botón bolera ---- Genera un ticket de la bolera (document.write)
+        Precio 10$
+        de 0 a 5 - 1$
+        de 6 a 12 - 75%
+        de 13 a 50 - 0%
+        de 51 a 65 - 75%
+        de <65 - 1$
+    -->
+    <h2>Calculadora</h2>
+
+    <button onclick="pedir()">Enviar</button>
+
+    <h2>Adivinar el numero</h2>
+
+    <button onclick="juego()">Enviar</button>
+
+    <h2>ticket boelra</h2>
+
+    <button onclick="bolera()">Enviar</button>
+
+    
+    <script>
+        function pedir() {
+            var num = parseInt(prompt("Primer numero: "));
+            var otro = parseInt(prompt("segundo numero: "));
+
+            alert("La suma es: "+(num+otro));
+            alert("La resta es: "+(num-otro));
+            alert("la multiplicación es: "+(num*otro));
+
+        }
+
+        function juego() {
+            var jugador = parseInt(prompt("Dime un numero entre 1 al 10"));
+            var maquina = (Math.floor((Math.random()*(10-1))-1));
+
+            while(jugador!=maquina){
+                if(jugador<maquina){
+                    alert("te has quedado corte");
+                    jugador = parseInt(prompt("Intentalo de nuevo: "));
+                }
+                else{
+                    alert("te has pasado");
+                    jugador = parseInt(prompt("Intentalo de nuevo: "));
+                }
+            }
+
+            if(jugador==maquina){
+                alert("Felicidades has ganado");
+            }
+        }
+
+        function bolera() {
+            const precioN = 10;
+            var numero = parseInt(prompt("Cuanta gente viene"));
+            var precios;
+            var totalPagar=0;
+
+            for(let i = 0; i< numero; i++){
+                edades=parseInt(prompt("Dime tu edad"));
+
+                if(edades<5||edades>65){
+                    precios=1;
+                }
+                else if((12>edades&&edades<6)||(51>edades&&edades<65)){
+                    var res = (75*precioN)/100;
+                    var res2 = precioN-res;
+                    precios=res2;
+                }
+                else{
+                    precios=10;
+                }
+                totalPagar+=precios;
+            }
+            document.write("TICKER"+"<br>");
+            document.write("----------------------------------"+"<br>");
+            document.write("En total han sido: "+numero+"<br>");
+            document.write("Total a pagar: "+totalPagar);
+        }
+    </script>
+</body>
+</html>
