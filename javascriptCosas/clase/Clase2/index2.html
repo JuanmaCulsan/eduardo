@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var dedo;
+        function cambia(){
+            var dedo = querySelector("p");
+            //puedes tocar todos los atributos de una etiqueta
+            alert(dedo.align);
+            dedo.align ="right";
+            alert(dedo.align);
+            dedo.id="robert";
+            dedo.className="fasil";
+        }
+
+        //todas las etiquetas tienen dos atributos propios de javascript
+        dedo.textContent
+        //el texto del primer nodo 
+        dedo.innerHTML 
+        //lo que tiene dentro esa variable es todo lo que haya entre las etiquetas de ese nodo
+        //de vuelve una cadena
+    </script>
+</head>
+<body>
+    <p align="center" mouseover="cambia()">
+        <b>Juan insulta a JF</b>
+    </p>
+</body>
+</html>
