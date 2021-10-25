@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        var color = document.querySelector("#dolor");
+
+        var rojo = document.querySelector("#rojo");
+        var verde = document.querySelector("#verde");
+        var azul = document.querySelector("#azul");
+        var amarillo = document.querySelector("#amarillo");
+        var rosa = document.querySelector("#rosa");
+
+        function cambio(){
+            if(rojo.value=="red"){
+                color.style.background = rojo.value;
+                console.log(rojo);
+            }
+            else if(verde.value=="green"){
+                color.style.background = verde.value;
+            }
+            else if(azul.value=="blue"){
+                color.style.background = azul.value;
+            }
+            else if(amarillo.value=="yellow"){
+                color.style.background = amarillo.value;
+            }
+            else if(rosa.value=="pink"){
+                color.style.background = rosa.value;
+            }
+        }
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="dolor">
+        <button id="rojo" value="red" onclick="cambio()"> rojo </button>
+        <button id="verde" value="green" onclick="cambio()"> verde </button>
+        <button id="azul" value="blue" onclick="cambio()"> azul </button>
+        <button id="amarillo" value="yellow" onclick="cambio()"> amarillo </button>
+        <button id="rosa" value="pink" onclick="cambio()"> rosa </button>
+    </div>
+</body>
+</html>
