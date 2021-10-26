@@ -33,3 +33,50 @@ window.onload = function(){
         }
     }
 }
+
+/*
+
+        function fotoanterior{
+            fotomostrada = document.querySelector("img");
+            let atributosrc = fotoMostrada.getAtributte("src");
+            switch (atributosrc){
+                case="--/img5.jpg":
+                    fotoMostrada.setAttribute("src",../img/4.jpg);
+                    break;
+                
+                case="--/img4.jpg":
+                    fotoMostrada.setAttribute("src"../img/3.jpg);
+                    break;
+
+                case="--/img3.jpg":
+                    fotoMostrada.setAttribute("src"../img/2.jpg);
+                    break;
+
+                case="--/img2.jpg":
+                    fotoMostrada.setAttribute("src"../img/1.jpg);
+                    break;
+            }
+        }
+
+        function fotoSiguiente{
+            fotomostrada = document.querySelector("img");
+            let atributosrc = fotoMostrada.getAtributte("src");
+            switch (atributosrc){
+                case="--/img1.jpg":
+                    fotoMostrada.setAttribute("src",../img/2.jpg);
+                    break;
+                
+                case="--/img2.jpg":
+                    fotoMostrada.setAttribute("src"../img/3.jpg);
+                    break;
+
+                case="--/img3.jpg":
+                    fotoMostrada.setAttribute("src"../img/4.jpg);
+                    break;
+
+                case="--/img4.jpg":
+                    fotoMostrada.setAttribute("src"../img/5.jpg);
+                    break;
+            }
+        }
+*/

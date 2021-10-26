@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="EJ8.js"></script>
+    <title>Document</title>
+    <script>
+        function over(image) {
+            image.src= "crying.jpg";
+        }
+        function out(image) {
+            image.src= "gatos.jpg"
+        }
+    </script>
+    <style>
+        img{
+            width: 700px;
+            height: 600px;
+            margin-left: 30%;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <img src="gatos.jpg" onmouseover="over(this)" onmouseout="out(this)">
+</body>
+</html>

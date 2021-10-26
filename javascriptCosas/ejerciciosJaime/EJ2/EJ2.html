@@ -12,15 +12,15 @@
             var valorW =parseInt(prompt("Dime la nueva anchura: "));
             var valorH =parseInt(prompt("dime la nueva altura: "));
             cambio.width=valorW;
-            cambio.getAttribute("height")=valorH;
+            cambio.setAttribute("height",valorH);
             
         }
 
         function borde(){
             var borde = document.querySelector("table");
-            alert("el borde actual es de 1px");
+            alert("el borde actual es de "+ borde.getAttribute("border"));
             var nuevoborde = parseInt(prompt("Dime el nuevo borde"));
-            borde.border=nuevoborde;
+            borde.setAttribute("border",nuevoborde);
         }
 
         function mover() {
