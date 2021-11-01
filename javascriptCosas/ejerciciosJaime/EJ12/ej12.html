@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="izquierda()" ><<</button>
+    <button onclick="derecha()">>></button>
+    <button onclick="reset()">reset</button>
+    <div onmouseover="derecha()">
+        <img id="img" height="200px" width="200px" src="gatos.jpg">
+    </div>
+
+
+    <script>
+        function derecha(){
+            var imagen = document.querySelector("#img");
+            // console.log(imagen);
+            var estilo = window.getComputedStyle(imagen);
+            // console.log(estilo);
+            var marlef = estilo.getPropertyValue("margin-left");
+            // console.log(marlef);
+            var resultado = parseInt(marlef);
+            if(resultado<1000){
+                resultado = parseInt(marlef)+5;
+            }
+            //console.log(resultado);
+            imagen.style.setProperty("margin-left",resultado+"px");
+            console.log(imagen);
+        }
+
+        function izquierda(){
+            var imagen = document.querySelector("#img");
+            // console.log(imagen);
+            var estilo = window.getComputedStyle(imagen);
+            // console.log(estilo);
+            var marrig = estilo.getPropertyValue("margin-left");
+            // console.log(marrig);
+            var resultado = parseInt(marrig);
+            if(resultado>5){
+                resultado = parseInt(marrig)-5;
+            }
+            //console.log(resultado);
+            imagen.style.setProperty("margin-left",resultado+"px");
+            // console.log(imagen);
+        }
+
+        function reset(){
+            var imagen = document.querySelector("#img");
+            // console.log(imagen);
+            var estilo = window.getComputedStyle(imagen);
+            // console.log(estilo);
+            var marrig = estilo.getPropertyValue("margin-left");
+            // console.log(marrig);
+            imagen.style.setProperty("margin-left",0+"px");
+            // console.log(imagen);
+        }
+    </script>
+</body>
+</html>

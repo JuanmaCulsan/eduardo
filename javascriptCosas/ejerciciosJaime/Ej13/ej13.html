@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p onclick="cambiar()">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero libero nemo quasi aliquam sequi commodi numquam laborum ratione ea officiis! Nemo rem odit et nisi eveniet adipisci animi, porro voluptas!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur blanditiis sequi perferendis! Architecto earum explicabo, doloremque harum recusandae voluptatum obcaecati, minus delectus incidunt reprehenderit animi facere. Officiis quos reprehenderit in!
+        </p>
+    </div>
+    <script>
+        function cambiar(){
+            var parrafo = document.querySelector("p");
+            var estilo = window.getComputedStyle(parrafo);
+            var bg=estilo.getPropertyValue("background-color");
+            var bg2=estilo.getPropertyValue("color");
+            
+            if(bg!=bg2){
+                parrafo.style.setProperty("background-color",bg2);
+            }
+            else{
+                parrafo.style.setProperty("background-color","white");
+            }
+        }
+    </script>
+</body>
+</html>

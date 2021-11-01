@@ -8,13 +8,13 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="div1" onmouseover="color()">
+    <div id="div1" onmouseover="color()" onmouseout="fuera()">
 
     </div>
-    <div id="div2" onmouseover="color2()">
+    <div id="div2" onmouseover="color2()" onmouseout="fuera()">
         
     </div>
-    <div id="div3" onmouseover="color3()">
+    <div id="div3" onmouseover="color3()" onmouseout="fuera()">
         
     </div>
 
@@ -24,6 +24,7 @@
             var div1 = document.getElementById("div1");
             var estilos = window.getComputedStyle(div1);
             var bg=estilos.getPropertyValue("background-color");
+
 
             var body = document.querySelector("body");
             body.style.setProperty("background-color",bg);
@@ -47,6 +48,11 @@
 
             var body = document.querySelector("body");
             body.style.setProperty("background-color",bg);
+        }
+
+        function fuera(){
+            var body = document.querySelector("body");
+            body.style.setProperty("background-color","white");
         }
         
 

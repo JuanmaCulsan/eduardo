@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #caja{
+            width: 500px;
+            height: 500px;
+            text-align: center;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        ACCESO A PROPIEDADES CSS
+        la primera forma:
+
+        var dedo=document.getByElement(#caja);
+
+        1.- si la propiedad es de una palabra ejemplo width la pongo tal cual
+        2.- si la propiedad es compuesta lo que tengo es que juntar las dos palabras y poner la segunda en mayuscula
+
+        dedo.style.border="2px solid red"
+
+        dedo.style.setProperty("width","700px");
+        dedo.style.width("700px");
+
+
+        CONSULTAR VALORES DE LA HOJA DE ESTILOS
+
+        1.- var dedo = document.getElementByid("caja");
+        2.- var estilos = window.getComputedStyle(dedo);
+        3.- var color=estilos.getPropertyValue("color"); siempre devuelve una cadena si, con width puedes poner un parseInt y quita los px automaticamente
+            var color=estilos.getPropertyValue("text-align");
+    -->
+
+    <div id="caja">
+
+    </div>
+
+    <script>
+        var dedo = document.getElementById("caja");
+        var estilos = window.getComputedStyle(dedo);
+        var color=estilos.getPropertyValue("color");
+
+        dedo.style.width="700px";
+        dedo.style.textAlign="right";
+
+        dedo.style.border="2px solid red";
+        dedo.style.background="#FA3 'img/foto.jpg' no-repeat";
+
+        dedo.setAttibute("src","img");
+
+        alert(dedo.style.width);
+        alert(dedo.style.height);
+        alert(dedo.style.border);
+        alert(dedo.style.color);
+    </script>
+</body>
+</html>

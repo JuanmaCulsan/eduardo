@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div1" onmouseover="accion()" onmouseout="hide()">
+        hola
+    </div>
+    <div id="div2">
+        adios
+    </div>
+    <div id="div3">
+        chorizo
+    </div>
+
+    <script>
+        function accion(){
+            var div2 = document.querySelector("#div2");
+            div2.style.setProperty("visibility","visible");
+            
+            var div3 = document.querySelector("#div3");
+            div3.style.setProperty("display","block");
+        }
+
+        function hide(){
+            var div2 = document.querySelector("#div2");
+            div2.style.setProperty("visibility","hidden");
+
+            var div3 = document.querySelector("#div3");
+            div3.style.setProperty("display","none");
+        }
+    </script>
+</body>
+</html>
