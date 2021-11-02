@@ -17,13 +17,44 @@
 <body>
     <div class="contenido">
       <div class="header">
-        <img id="logo" src="../tarea7/jm-logo.png" alt="logo jm">
+        <img id="logo" src="../tarea7/logos/jm-logo.png" alt="logo jm">
         <h1 id="titulo">Juan Manuel Culsán Rondón</h1>
-        <img id="twitter" src="../tarea7/twitter.png" alt="">
-        <img id="facebook" src="../tarea7/facebook.png" alt="">
-        <img id="instagram" src="../tarea7/instagram.png" alt="">
-        <h3 id="aboutme">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione saepe vel error. Mollitia inventore nam perspiciatis incidunt laborum cum rem quisquam deserunt nemo magni, voluptates dolore dignissimos autem iure! Ab!</h3>
+        <img id="twitter" src="../tarea7/logos/twitter.png" alt="">
+        <img id="facebook" src="../tarea7/logos/facebook.png" alt="">
+        <img id="instagram" src="../tarea7/logos/instagram.png" alt="">
+        <h3 id="aboutme">Bienvenido a mi Portfolio, mi nombre es Juanma y actualmente estoy estudiando para ser desarrollador web, esta es una pequeña muestra de algunas de las cosas que he estado haciendo, si tienes alguna duda por favor contáctame</h3>
       </div>
+      <h3 id="misProyectos">Mis Proyectos</h3>
+      <div id="tabla">
+        <table >
+          <tr>
+            <td>
+              <img class="fotos" src="../tarea7/proyectos/concierto.jpg"></img>
+            </td>
+            <td>
+              <img class="fotos" src="../tarea7/proyectos/food.jpg"></img>
+            </td>
+            <td>
+              <img class="fotos" src="../tarea7/proyectos/mapa.jpg"></img>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img class="fotos" src="../tarea7/proyectos/ropa.jpg"></img>
+            </td>
+            <td>
+              <img class="fotos" src="../tarea7/proyectos/vet.jpg"></img>
+            </td>
+            <td>
+              <img class="fotos" src="../tarea7/proyectos/videogame.png"></img>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div id="miCV">
+      <h3><a id="textcv" target="_blank" href="../tarea7/micv.pdf">Curriculum Online</a></h3>
+    </div>
       <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
         <ol class="carousel-indicators">
@@ -35,13 +66,13 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
             <div class="item active">
-                <img src="../tarea7/banner/coding_banner2.png" alt="">
+                <img height="500px" src="../tarea7/banner/coding_banner2.png" alt="">
             </div>
             <div class="item">
-                <img src="../tarea7/banner/games-banner2.png" alt="">
+                <img height="500px" src="../tarea7/banner/games-banner2.png" alt="">
             </div>
             <div class="item">
-                <img src="../tarea7/banner/world_wildlife_day.jpg" alt="">
+                <img height="500px" src="../tarea7/banner/world_wildlife_day.jpg" alt="">
             </div>
         </div>
     
@@ -55,22 +86,59 @@
             <span class="sr-only">Next</span>
         </a>
       </div>
-      <div id="tabla">
-        <table >
-          <tr>
-            <td>
-              <img class="fotos" src="../tarea7/proyectos/background-website.jpg"></img>
-            </td>
-            <td>
-              <img class="fotos" src="../tarea7/proyectos/background-website.jpg"></img>
-            </td>
-            <td>
-              <img class="fotos" src="../tarea7/proyectos/background-website.jpg"></img>
-            </td>
-          </tr>
-        </table>
-      </div>
-    </div>
+      <footer class="footer">
+        <div class="footer__addr">
+          <h1 class="footer__logo">Something</h1>
+              
+          <h2>Contact</h2>
+          
+          <address>
+            5534 Somewhere In. The World 22193-10212<br>
+                
+            <a class="footer__btn" href="mailto:example@gmail.com">Email Us</a>
+          </address>
+        </div>
+        
+        <ul class="footer__nav">
+          <li class="nav__item">
+            <h2 class="nav__title">Media</h2>
+      
+            <ul class="nav__ul">
+              <li>
+                <a href="#">Twitter</a>
+              </li>
+      
+              <li>
+                <a href="#">facebook</a>
+              </li>
+              <li>
+                <a href="#">Instagram</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav__item">
+            <h2 class="nav__title">Legal</h2>
+            
+            <ul class="nav__ul">
+              <li>
+                <a href="#">Política de Privacidad</a>
+              </li>
+              
+              <li>
+                <a href="#">Condiciones de uso</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        
+        <div class="legal">
+          <p>&copy; 2021 Todos los berverechos reservados.</p>
+          
+          <div class="legal__links">
+            <span>Made with <span class="heart">♥</span> remotely from Anywhere</span>
+          </div>
+        </div>
+      </footer>
   <script src="../bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>
