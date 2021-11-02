@@ -9,24 +9,15 @@
 </head>
 <body>
     <div>
-        <p onclick="cambiar()">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero libero nemo quasi aliquam sequi commodi numquam laborum ratione ea officiis! Nemo rem odit et nisi eveniet adipisci animi, porro voluptas!
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur blanditiis sequi perferendis! Architecto earum explicabo, doloremque harum recusandae voluptatum obcaecati, minus delectus incidunt reprehenderit animi facere. Officiis quos reprehenderit in!
-        </p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti eius est expedita, cupiditate deserunt perspiciatis facilis eos nulla praesentium cum molestias error amet quod aliquam! Sint tempore architecto dicta atque?</p>
     </div>
-    <script>
-        function cambiar(){
-            var parrafo = document.querySelector("p");
-            var estilo = window.getComputedStyle(parrafo);
-            var bg=estilo.getPropertyValue("background-color");
-            var bg2=estilo.getPropertyValue("color");
-            
-            if(bg!=bg2){
-                parrafo.style.setProperty("background-color",bg2);
-            }
-            else{
-                parrafo.style.setProperty("background-color","white");
-            }
-        }
-    </script>
+    <span onclick="spoiler()"><a href="#" rel="noopener noreferrer">SPOILER</a></span>
+    <div id="spoiler">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime esse dicta nemo ex quia adipisci laudantium voluptas soluta optio, quis inventore pariatur veniam cupiditate quae iste perspiciatis! Non, repellendus dolores?</p>
+    </div>
+    <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis ducimus in nostrum, atque commodi quae minus inventore, totam eius expedita dolorum! Maxime, excepturi. Recusandae facilis sequi similique voluptatibus consequuntur rem!</p>
+    </div>
+    <script src="ej13.js"></script>
 </body>
 </html>

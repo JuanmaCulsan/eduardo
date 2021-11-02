@@ -14,22 +14,20 @@
     <div onmouseover="derecha()">
         <img id="img" height="200px" width="200px" src="gatos.jpg">
     </div>
-
-
     <script>
         function derecha(){
             var imagen = document.querySelector("#img");
             // console.log(imagen);
             var estilo = window.getComputedStyle(imagen);
             // console.log(estilo);
-            var marlef = estilo.getPropertyValue("margin-left");
+            var marlef = estilo.getPropertyValue("left");
             // console.log(marlef);
             var resultado = parseInt(marlef);
             if(resultado<1000){
                 resultado = parseInt(marlef)+5;
             }
             //console.log(resultado);
-            imagen.style.setProperty("margin-left",resultado+"px");
+            imagen.style.setProperty("left",resultado+"px");
             console.log(imagen);
         }
 
@@ -38,14 +36,14 @@
             // console.log(imagen);
             var estilo = window.getComputedStyle(imagen);
             // console.log(estilo);
-            var marrig = estilo.getPropertyValue("margin-left");
+            var marrig = estilo.getPropertyValue("left");
             // console.log(marrig);
             var resultado = parseInt(marrig);
             if(resultado>5){
                 resultado = parseInt(marrig)-5;
             }
             //console.log(resultado);
-            imagen.style.setProperty("margin-left",resultado+"px");
+            imagen.style.setProperty("left",resultado+"px");
             // console.log(imagen);
         }
 
@@ -54,9 +52,9 @@
             // console.log(imagen);
             var estilo = window.getComputedStyle(imagen);
             // console.log(estilo);
-            var marrig = estilo.getPropertyValue("margin-left");
+            var marrig = estilo.getPropertyValue("left");
             // console.log(marrig);
-            imagen.style.setProperty("margin-left",0+"px");
+            imagen.style.setProperty("left",0+"px");
             // console.log(imagen);
         }
     </script>
