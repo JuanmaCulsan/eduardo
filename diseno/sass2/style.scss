@@ -1,0 +1,13 @@
+$color1: red;
+$color2: black;
+$anchura: 400px;
+
+
+h1{
+    background-color: $color1;
+}
+
+#circulo{
+    background-color: $color2;
+    width: $anchura;
+}
