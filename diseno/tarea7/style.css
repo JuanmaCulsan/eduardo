@@ -8,8 +8,26 @@ body{
     padding: 0px;
     background-image: url(../tarea7/proyectos/background-website.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size:cover;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#miFoto{
+  width: 280px;
+  height: auto;
+  text-align: center;
+  margin-left: 35%;
+  margin-top: 20px;
+  background-color: #EFEBEF;
+  padding: 10px;
+  border-top-left-radius: 50%;  
+  border-top-right-radius: 50%;  
+  border-bottom-right-radius: 50%;  
+  border-bottom-left-radius: 50%;
+}
+
+#header{
+  position: fixed;
 }
 
 .contenido{
@@ -27,6 +45,7 @@ body{
 .fotos:hover{
     opacity: 0.8;
     cursor: pointer;
+    box-shadow: 10px 5px 5px black;
 }
 
 #misProyectos{
@@ -56,6 +75,7 @@ body{
 
 #textcv{
     text-decoration: none;
+    color: #F5AA46;
 }
 
 #tabla{
@@ -78,6 +98,10 @@ body{
     height: 50px;
     display: inline-block;
     margin-left: 30px;
+    border-top-left-radius: 50%;  
+    border-top-right-radius: 50%;  
+    border-bottom-right-radius: 50%;  
+    border-bottom-left-radius: 50%;
 }
 
 #aboutme{
@@ -87,6 +111,8 @@ body{
     height: fit-content;
     padding: 20px;
     border-radius: 10px;
+    box-shadow: 5px 3px 3px black;
+    margin-bottom: 70px;
 }
 
 .footer {

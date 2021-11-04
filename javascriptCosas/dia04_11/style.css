@@ -1,0 +1,9 @@
+#cuadrado{
+    position: absolute;
+    border: 2px solid black;
+    width: 150px;
+    height: 150px;
+    top: 0px;
+    left: 0px;
+    background-color: chartreuse;
+}
