@@ -36,10 +36,18 @@ function descargar(){
     res=parseInt(anchura);
     res=0;
     dedo.style.setProperty("width",res+"px");
+    
+    var parrafo=document.querySelector("p");
+    console.log(parrafo);
+    var valor = parseInt(parrafo.textContent);
+    console.log(valor);
+    var suma=valor+1;
+    console.log(suma);
+    parrafo.textContent=suma;
 
     var dedo3 = document.querySelector("button");
     dedo3.disabled=true;
-
+    
 }
 
 
