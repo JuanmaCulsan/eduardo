@@ -1,16 +1,16 @@
 var timerRojo,timerVerde,timerAzul,timerAmarillo;
 
 function run(){
-    var aleRojo = Math.floor(Math.random()*10+1);
+    var aleRojo = Math.floor(Math.random()*30+1);
     timerRojo = setInterval("correrRojo()",aleRojo);
 
-    var aleVerde = Math.floor(Math.random()*10+1);
+    var aleVerde = Math.floor(Math.random()*30+1);
     timerVerde = setInterval("correrVerde()",aleVerde);
 
-    var aleAzul = Math.floor(Math.random()*10+1);
+    var aleAzul = Math.floor(Math.random()*30+1);
     timerAzul = setInterval("correrAzul()",aleAzul);
 
-    var aleAmarillo = Math.floor(Math.random()*10+1);
+    var aleAmarillo = Math.floor(Math.random()*30+1);
     timerAmarillo = setInterval("correrAmarillo()",aleAmarillo);
      
 }
@@ -20,9 +20,17 @@ function correrRojo(){
     var rojo = document.querySelectorAll("div")[0];
     var estiloR= window.getComputedStyle(rojo);
     var leftRojo= estiloR.getPropertyValue("left");
+    var ancho = estiloR.getPropertyValue("width");
 
+
+    anchoRojo=parseInt(ancho);
     resRojo=parseInt(leftRojo)+1;
-    rojo.style.left=resRojo+"px";
+    if((resRojo+anchoRojo)<screen.width){
+        rojo.style.left=resRojo+"px";
+    }
+    else{
+        clearInterval(timerRojo);
+    }
 }
 
 function correrAzul(){
@@ -65,9 +73,11 @@ function reset(){
     var azul = document.querySelectorAll("div")[1];
     azul.style.left=0+"px";
 
+    //VERDE
     var verde = document.querySelectorAll("div")[2];
     verde.style.left=0+"px";
 
+    //AMARILLO
     var amarillo = document.querySelectorAll("div")[3];
     amarillo.style.left=0+"px";
 }

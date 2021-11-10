@@ -1,7 +1,7 @@
 var timer;
 
 function mover() {
-    timer = setInterval("cargar()",1);
+    timer = setInterval("cargar()",20);
 }
 
 function cargar() {
