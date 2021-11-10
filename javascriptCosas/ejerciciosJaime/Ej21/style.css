@@ -1,0 +1,13 @@
+.enlace{
+    float: right;
+    width: 200px;
+    height: 200px;
+    background-color:ghostwhite;
+    color: black;
+    font-size: 15px;
+    border: 2px solid red;
+}
+
+a{
+    float:left;
+}

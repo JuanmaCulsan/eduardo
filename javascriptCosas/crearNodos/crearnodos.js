@@ -24,13 +24,13 @@ function crear() {
 
 function borrar() {
     //1 llegar al padre
-    //var papi = document.querySelector("article");
+    var papi = document.querySelector("article");
     var elemento = document.getElementsByTagName("p");
     //otra forma de ahorrarnos la primera linea para poder buscar al padre
-    var papi = elemento.parentNode;
-    
+    //var papi = elemento.parentNode;
+
+
     //2 eliminar desde el padre
-    
     papi.removeChild(elemento[0]);
 
 

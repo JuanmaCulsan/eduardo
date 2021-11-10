@@ -1,0 +1,19 @@
+.claseA{
+    height: 400px;
+    width: 200px;
+    border: 2px solid red;
+    font-size: 20px;
+}
+
+.claseB{
+    height: 200px;
+    width: 400px;
+    border: 3px dotted blue;
+    font-size: 20px;
+}
+
+.tabla{
+    border: 1px solid black;
+    width: 200px;
+    height: 300px;
+}
