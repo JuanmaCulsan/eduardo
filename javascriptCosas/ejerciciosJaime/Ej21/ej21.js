@@ -4,8 +4,7 @@ function enlace(num) {
         nuevo.className="enlace";
         
         var href = document.querySelectorAll("a")
-        var valor = href[0].getAttribute("href");
-        
+        var valor = href[num].getAttribute("href");
 
         var texto = "Esto es un enlace a "+valor;
         var nuevotexto=document.createTextNode(texto);
@@ -37,7 +36,6 @@ function enlace(num) {
         var href = document.querySelectorAll("a")
         var valor = href[2].getAttribute("href");
         
-
         var texto = "Esto es un enlace a "+valor;
         var nuevotexto=document.createTextNode(texto);
 

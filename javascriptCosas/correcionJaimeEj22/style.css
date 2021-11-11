@@ -1,0 +1,13 @@
+.capa{
+    opacity: 0.7;
+    position: absolute;
+    background-color: gray;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.imagen{
+    position: absolute;
+    z-index: 8;
+}

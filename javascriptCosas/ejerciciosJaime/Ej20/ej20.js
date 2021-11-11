@@ -48,22 +48,33 @@ function sustituir(){
         padre.removeChild(p[0]);
     }
 
+    var div = document.querySelector("div");
     var tabla = document.createElement("table");
     tabla.className="tabla";
-    var tabla1 = document.createElement("tr");
-    var tabla2 = document.createElement("td");
-    var tabla3 = document.createElement("td");
-    var tabla4 = document.createElement("tr");
-    var tabla5 = document.createElement("td");
-    var tabla6 = document.createElement("td");
+    var thead = document.createElement("thead");
+    var tbody = document.createElement("tbody");
 
-    var padre = document.querySelector("div");
-    padre.appendChild(tabla);
-    padre.appendChild(tabla1);
-    padre.appendChild(tabla2);
-    padre.appendChild(tabla3);
-    padre.appendChild(tabla4);
-    padre.appendChild(tabla5);
-    padre.appendChild(tabla6);
+    tabla.appendChild(thead);
+    tabla.appendChild(tbody);
+
+    var cuerpo = document.querySelector("body");
+
+    cuerpo.replaceChild(tabla,div);
+
+    cuerpo.insertBefore(tabla,div);
+
+    var row_1 = document.createElement("tr");
+    var space_1 = document.createElement("th");
+    space_1.innerHTML="sobaco";
+    var space_2 = document.createElement("th");
+    space_2.innerHTML="chorizo";
+
+    thead.appendChild(row_1);
+    row_1.appendChild(space_1);
+    row_1.appendChild(space_2);
+
+    
+    //div.appendChild(tabla);
+    
 
 }
