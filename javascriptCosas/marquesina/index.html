@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var tem;
+        window.onload=function(){
+
+            mover()
+        }
+
+        function mover() {
+
+            tem=window.setInterval("marquesina()",700);
+        }
+
+        function marquesina() {
+            //primero lo de siempre
+            var par=document.querySelector("p");
+            //metes el contenido en una variable 
+            var texto=par.textContent;
+            //metes el último caracter al principio del parrafo y te cargas el resto del contenido dentro de la variable par
+            par.innerText=texto[texto.length-1];
+            //conges el resto de la variable y la introduces por donde vaya el valor en j
+            for (let j = 0; j < (texto.length-1); j++) {
+
+                par.innerText+=texto[j];
+            }
+        }
+    </script>
+</head>
+<body>
+    <p> Toss a coin to your Witcher... Oh, Valley of Plenty </p>
+</body>
+</html>

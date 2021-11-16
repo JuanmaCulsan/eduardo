@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        window.onclick=function(){
+        //     var capa = document.createElement("div");
+        //     capa.style.opacity=0.7;
+        //     capa.style.backgroundColor= "#red";
+
+        //     capa.onclick= salir;
+
+
+
+        //     function salir(){
+        //         var fondo = document.querySelector("div");
+        //         var img = document.querySelecto("centro");//la imagen que he creado
+
+        //         var papi1 = fondo.parentNode;
+        //         papi1.removeChild("fondo");
+                
+        //         var papi2 = img.parentNode;
+        //         papi2.removeChild("img");
+        //     }
+            
+        //     //así ya no funcionaía el capa.onclick = salir;
+        //     function salir(num){
+        //         var fondo = document.querySelector("div");
+        //         var img = document.querySelecto("centro");//la imagen que he creado
+
+        //         var papi1 = fondo.parentNode;
+        //         papi1.removeChild("fondo");
+                
+        //         var papi2 = img.parentNode;
+        //         papi2.removeChild("img");
+        //     }
+
+
+        //     //funciones anónimas
+        //     //no pueden ser llamadas por loq ue actuan de otra forma
+        //     //ejemplo:
+
+        //     capa.onclick = function (){
+        //         salir(23);
+        //     }
+
+        //     //en el borrar(this) borro el elemento por el que voy y lo borro
+        //     function borrar(ele){
+        //         var papi = ele.parentNode;
+        //         papi.removeChild(ele);
+        //     }
+
+        //     //las funciones anonimas tienen dos cosas muy interesantes
+            
+        //     var divs = document.getElementsByTagName("div");
+
+        //     for(let i=0;i<divs.length;i++){
+        //         divs[i].onclick= function(){
+        //             //this 
+        //             this.style.backgroundColor="#red";
+        //             borrar(this);
+        //         }
+        //     }
+        // }
+        //todas las celdas de una tabla aparece una imagen
+
+            var enlace = document.querySelector("a");
+            enlace.onclick= function(e){ //e tiene el evento 
+                e.preventDefault();
+                alert("no seas guarro");
+
+            }
+        }
+    </script>
+</head>
+<body>
+    <a href="https//FromSoftware.es">DOLOR</a>
+</body>
+</html>

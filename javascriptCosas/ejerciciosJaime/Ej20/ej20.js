@@ -41,18 +41,31 @@ function borrarNuevo(){
 }
 
 function sustituir(){
-    var padre = document.querySelector("div");
+    var padre = document.querySelector("body");
     var p = document.querySelectorAll("p");
 
     if(p[0].className=="claseA"){
         padre.removeChild(p[0]);
     }
 
-    var div = document.querySelector("div");
-    var tabla = document.createElement("table");
-    tabla.className="tabla";
-    var thead = document.createElement("thead");
-    var tbody = document.createElement("tbody");
+    var t = createElement("tabla");
+    
+    for(let i=1;i<=50;i++){
+        var f = document.createElement("tr");
+
+        for(let k=1;k<=25;k++ ){
+            var celda = document.createElement("td");
+            celda.innerHTML="hola";
+            f.appendChild(celda);
+        }
+        t.appendChild(f); 
+    }
+    document.body.appendChild(t);
+
+    
+
+
+    /*
 
     tabla.appendChild(thead);
     tabla.appendChild(tbody);
@@ -75,6 +88,6 @@ function sustituir(){
 
     
     //div.appendChild(tabla);
-    
+    */
 
 }
