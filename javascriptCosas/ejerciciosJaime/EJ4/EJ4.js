@@ -32,7 +32,61 @@ window.onload = function(){
             back.disabled = true;
         }
     }
+
 }
+
+var imagenes = [
+    "perritos/perrito1.jpg",
+    "perritos/perrito2.jpg",
+    "perritos/perrito3.jpg",
+    "perritos/perrito4.jpg",
+    "perritos/perrito5.jpg"
+];
+
+var hola
+function play() {
+    hola = setInterval("mover()",1000);
+    let caca = document.querySelector("#play");
+    caca.setAttribute("onclick","stop()");
+    document.querySelector("#play").innerHTML = "STOP";
+    
+}
+
+
+var cont=0
+function mover() {
+    imagenes;
+    meter();
+    if(cont>=imagenes.length){
+        cont=0
+    }
+    foto.setAttribute("src",imagenes[cont]);
+    console.log(cont);
+    cont++;
+}
+
+function stop() {
+    clearInterval(hola);
+    let caca = document.querySelector("#play");
+    caca.setAttribute("onclick","play()");
+    document.querySelector("#play").innerHTML = "PLAY";
+    cont=0;
+}
+
+var pedir;
+function anadir() {
+    pedir = prompt("dime una ruta: ","");
+    meter();
+}
+
+function meter() {
+    console.log(pedir);
+    imagenes.push(pedir);
+    console.log(imagenes);
+}
+    
+
+
 
 /*
 

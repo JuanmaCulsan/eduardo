@@ -1,5 +1,15 @@
+var tama;
 window.onload = function(){
-    var tamaño = parseInt(prompt("elija el tamaño del ascensor",""));
+    tama = parseInt(prompt("elija el tamaño del ascensor",""));
 
-    var pisos = document.createElement
+    
 }
+
+// function creardivs() {
+//     for (let i = 0; i < tama; i++) {
+//         const element = array[i];
+        
+//     }
+//     var crear = document.createElement("div");
+//     nuevo = 
+// }
