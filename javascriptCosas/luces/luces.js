@@ -18,3 +18,11 @@ function crear(x) {
         padre.appendChild(divs);
     }
 }
+
+function ale(){
+    
+    for (let i = 0; i < x; i++) {
+        
+        
+    }
+}
