@@ -12,17 +12,34 @@
             do{
                 var valor=prompt("valor aquí");
                 if(valor!=""){
-                    lista.push=valor;
+                    lista.push(valor);
+                    //console.log(lista);
                 }
             }while(valor!="");
+            //console.log(lista.length);
+            for (let i = 0; i < lista.length; i++) {
+                console.log(lista[i]);
+                
+            }
+
+            buscar(lista);
         }
 
-        var buscar=prompt("Quieres buscar algo en la lista");
-        
+        function buscar(lista){
+                var buscar = prompt("Qué quieres buscar");
+                for (let i = 0; i < lista.length; i++) {
+                    if(lista[i]==buscar){
+                        res= true;
+                        console.log(res);
+                        return res;
+                    }
+                }
+                res = false;
+                console.log(res);
+                return res;
+                
+            }  
 
-        function mostrar(){
-
-        }
     </script>
 </head>
 <body>

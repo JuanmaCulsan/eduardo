@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var cadena = prompt("Dime una frase: ","");
+
+        var res = cadena.split(" ");
+
+        for (let i = 0; i < res.length; i++) {
+            console.log(res[i]);
+            
+        }
+
+        longitud(res);
+
+        function longitud(res){
+            for (let i = 0; i < res.length; i++) {
+                var longi = res[i].length;
+                console.log(longi);      
+            }
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
