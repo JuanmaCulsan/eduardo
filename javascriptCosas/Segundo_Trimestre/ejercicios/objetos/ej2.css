@@ -1,0 +1,12 @@
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+div{
+    flex: content;
+    margin: 5px;
+    background-color: aliceblue;
+    border: 1px, solid black;
+}
+

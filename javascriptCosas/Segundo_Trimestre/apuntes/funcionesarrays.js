@@ -92,3 +92,19 @@ function nuevo(e,i){
     var res = e*i;
     console.log(res);
 }
+
+//JSON
+
+var usuario = new Array() // asi hace como 2000 años
+
+usuario[0]="jaja no";
+
+//los arrays van a ser enviados hacia nosotros
+//JSON es javascript object notation una alternativa mas sencilla menos completa que XML
+//pasar informacion de un lado a otro, por ejemplo de una pagina web a una aplicacion
+//JSON se pasa a fichero de texto.
+// se abre corchete y se coloca cada elementos de la array separado por comas
+var usuario=["juan","fran","carlos","santi"];
+console.log(usuario[2]);
+
+var temperaturas=[[17,22,13],[27,21,23],[19,21,22]];
