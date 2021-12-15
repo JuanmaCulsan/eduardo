@@ -49,16 +49,17 @@ window.onload = function () {
 
     var div = document.querySelector("div");
     var nombre = document.createElement("h2");
-    nombre.textContent=alumno.nombre;
+    nombre.textContent="Perfil del alumno";
     div.appendChild(nombre);
 
 
     for(let clave in alumno){
         if(clave=='asignaturas'){
             for(let otra in alumno[clave]){
+                otro=parseInt(otra);
                 var parraf = document.createElement("p");
-                parraf.textContent=otra+" : "+ alumno[clave][otra];
-                div.appendChild(parraf);
+                parraf.textContent="Asigantura "+(otro+1)+" "+" : "+ alumno[otro][clave][otra];
+                div.appendChild(clave); //el fallo ta aki
             }
         }
         else if(clave=='tutor'){
