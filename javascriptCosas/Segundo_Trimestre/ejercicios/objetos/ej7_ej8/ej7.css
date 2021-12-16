@@ -1,0 +1,16 @@
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(110, 106, 106);
+    border: 2px solid black;
+    box-shadow: 5px 5px 5px gray;
+    border-radius: 25px;
+    margin: 5px;
+}
