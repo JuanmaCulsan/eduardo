@@ -49,5 +49,6 @@ window.onload = function(){
 
     for (let key in ususario) {
         let nuevoSpan = document.createElement("span");
+        
     }
 }
