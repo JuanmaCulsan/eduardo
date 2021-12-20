@@ -1,9 +1,10 @@
+const { application } = require('express');
 var mysql = require('mysql');
 
 var con = mysql.createConnection({
   host: "localhost",
   port: "3307",
-  database: "practica1php",
+  database: "practica2php",
   user: "root",
   password: ""
 });
@@ -19,6 +20,10 @@ con.query("SELECT * from vehiculos", function (err, result, fields) {
     throw err;
 
     result.forEach(results => {
-        console.log(JSON.stringify(results,null,2));
+        //console.log(JSON.stringify(results,null,2));
+        console.log(JSON.stringify("hola"));
     });
 })
+
+
+

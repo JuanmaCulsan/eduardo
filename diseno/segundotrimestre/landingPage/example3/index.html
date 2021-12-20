@@ -5,25 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <title>Document</title>
 </head>
 <body>
     <header>
-        <div class="menu">
-            <i class="barra"></i>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
         </div>
         <div class="overlay">
 
         </div>
         <nav>
+            <i class="fas fa-times"></i>
             <div class="logo">
-                <img src="" alt="">
+                <img src="img/xbox_logo.png" alt="xbox logo">
             </div>
 
             <div class="nav-middle">
                 <ul>
                     <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Modelo</a></li>
+                    <li><a href="#">Game Pass</a></li>
                     <li><a href="#">Sobre mí</a></li>
                     <li><a href="#">Contacto</a></li>
                 </ul>
@@ -33,17 +36,17 @@
                 <ul>
                     <li>
                         <a href="#">
-                            <i class="busqueda"></i>
+                            <i class="fas fa-search"></i>
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <i class="usuario"></i>
+                            <i class="fas fa-user"> Cuenta</i>
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <i class="carta"></i>
+                            <i class="fas fa-cart"> Carta</i>
                         </a>
                     </li>
                 </ul>
@@ -52,7 +55,7 @@
         
         <div class="main">
             <div class="tone-1">
-                <div class="product-infor">
+                <div class="product-info">
                     <h1>XBOX SERIES S</h1>
                     <p>la nueva consola de XBOX está aquí</p>
                     <h2>299$</h2>
@@ -64,9 +67,15 @@
             </div>
 
             <div class="tone-2">
-                <img src="img/xboxseriesS.png" alt="">
+                <img src="img/xboxseriesS.png" class="animate__animated animate__fadeInRight" alt="xbox series s">
             </div>
         </div>
     </header>
+    <div class="game_pass">
+        
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </body>
 </html>
