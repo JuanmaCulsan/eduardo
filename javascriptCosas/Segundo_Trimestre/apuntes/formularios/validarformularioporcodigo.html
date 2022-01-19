@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+            var boton = document.getElementById("aceptar");
+            boton.onclick=function(e){
+                e.preventDefault();
+                validar();
+            }
+        }
+
+        function validar(){
+            var f = document.getElementById("form");
+            var cn = f.nombre;
+            if((cn.value=="")||(cn.value.length==0)){
+                alert("El campo nombre no puede estar vacio");
+                cn.focus();
+                //return;
+            }
+
+            var ca = f.apellido;
+            if((ca.value=="")||(ca.value.length==0)){
+                alert("El campo apellido no puede estar vacio");
+                ca.focus();
+            }
+
+            var ce = f.edad;
+            if((ce.value=="")||(ce.value.length==0)||(isNaN(ce.value))){
+                if((ce.value<18)||(ce.value>60)){
+                    alert("El campo edad no puede estar vacio");
+                    ca.focus();
+                }
+                
+            }
+
+            var cp = f.pass;
+            if((cp.value.length<8)&&(cp.value.length>12)){
+                alert("La clave no puede ser menor de 12 caracteres");
+                ca.focus();
+            }
+
+            var cp = f.pass;
+            var crc = f.repiteclave;
+            if(crc.value!=cp.value){
+                alert("El repite pass debe ser igual a la pass");
+                ca.focus();
+            }
+
+            var cp = f.pass;
+            var cn = f.nombre;
+            if(cn.value==cp.value){
+                alert("bro que haces");
+                cp.value="";
+                cp.focus();
+                return
+            }
+
+            var rad = document.querySelectorAll('input [type="radio"]');
+            if((!f.rad.name[0].checked)&&(!f.name[1].checked)){
+                alert("elige uno");
+                cp.focus();
+            }
+
+            var lista = f.ciudades
+            if(lista.selectedIndex==0){
+                alert("Alberto salta de un noveno");
+            }
+
+            var cond = f.condiciones;
+            if(!cond.checked){
+                alert("Acepta las condiciones de uso");
+                ca.focus();
+            }
+            //método que funciona como un onclick
+            f.submit();
+            
+        }
+    </script>
+</head>
+<body>
+    <form id="form">
+        <p>Nombre</p>
+        <input type="text" name="nombre" id="">
+        <br>
+        <p>Apellido</p>
+        <input type="text" name="apellido" id="">
+        <br>
+        <p>Pass</p>
+        <input type="text" name="pass" id="">
+        <br>
+        <p>Repite pass</p>
+        <input type="text" name="repiteclave" id="">
+        <br>
+        <p>Edad</p>
+        <input type="text" name="edad" id="">
+        <br>
+        <br>
+        <input type="radio" name="sexo" id=""><span>Si</span>
+        <br>
+        <input type="radio" name="sexo" id=""><span>Soy incel</span>
+        <br>
+        <br>
+        <select name="ciudades">
+            <option value="">Elige una ciudad</option>
+            <option value="">Malaga</option>
+            <option value="">Cádiz</option>
+            <option value="">Cordoba</option>
+        </select>
+        <br>
+        <input type="checkbox" name="condiciones" id="">
+    </form>
+    <input type="submit" id="aceptar" value="ACEPTAR">
+</body>
+</html>

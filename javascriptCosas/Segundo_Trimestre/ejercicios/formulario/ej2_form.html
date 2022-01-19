@@ -7,15 +7,28 @@
     <title>Document</title>
     <script>
         window.onload=function(){
+        var f = document.querySelector("form");
+            var input = f.querySelectorAll("input");
+            
+            input[1].readOnly=true;
+            input[2].setAttribute("onkeypress","copiar()");
+            console.log(input);
+       } 
 
-        }
+       function copiar(){
+        var f = document.querySelector("form");
+            var input = f.querySelectorAll("input");
+            var frase=input[0].value;
+            console.log(frase);
+            input[1].value=frase;
+       }
+
     </script>
 </head>
 <body>
     <form>
+        <input type="text" onkeypress="copiar()">
         <input type="text">
-        <input type="text">
-        <input type="button">
     </form>
 </body>
 </html>
