@@ -6,17 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        window.onload = function(){
-            var form = document.querySelector("form");
-            var select = document.querySelector("select");
-            var inputs = document.querySelectorAll()
+        window.onload=function(){
+            var f = document.forms[0];
+            var input = document.querySelectorAll("input[type='checkbox']");
+            for(let i = 0; i<input.length;i++){
+                input[i].checked;
+                input[i].setAttribute("onclick","comprobar("+i+")");
+            }
         }
 
-        
+        function comprobar(e){
+            var f = document.forms[0];
+            var input = document.querySelectorAll("input[type='checkbox']");
+            if(input[e].checked){
+                var select = document.querySelector("select");
+                var nuevoOption = document.createElement("option");
+                nuevoOption.name=input[e].name;
+                nuevoOption.textContent=input[e].name;
+                nuevoOption.value=input[e].name
+                select.appendChild(nuevoOption);
+            }
+            else if(input[e].checked==false){
+                var select = document.querySelector("select");
+                var option = document.querySelectorAll("option");
+                for(let i = 0; i<option.length;i++){
+                    if(option[i].name==input[e].name){
+                        console.log(option[i].value);
+                        select.removeChild(option[i]);
+                    } 
+                }     
+            }
+        }
     </script>
 </head>
 <body>
-    <p>seleccione los paises</p>
     <form action="">
         <input type="checkbox" name="España" id=""><span>España</span>
         <br>
@@ -26,12 +49,10 @@
         <br>
         <input type="checkbox" name="Dinamarca" id=""><span>Dinamarca</span>
         <br>
-        <input type="checkbox" name="España" id=""><span>España</span>
+        <input type="checkbox" name="suiza" id=""><span>Suiza</span>
         <br>
         <br>
-        <select name="paises" id="">
-            <option value="">Elige una opción</option>
-        </select>
+        <select name="paises" id=""></select>
     </form>
 </body>
 </html>
