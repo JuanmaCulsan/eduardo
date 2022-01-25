@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload=()=>{
+            var html = document.querySelector("html");
+            var divs = document.querySelectorAll("div");
+            
+            html.addEventListener("mousemove",(e)=> {
+                divs[0].textContent=e.screenX+" , "+e.screenY;
+            })
+            
+            html.addEventListener('contexmenu',(e)=>{
+                e.preventDefault();
+            });
+            
+        }
+    </script>
+    <style>
+        div{
+            align-items: center;
+            display: flex;
+            height: 50px;
+            justify-content: center;
+            width: 100px;
+            border: 2px black solid;
+            border-radius: 15px;
+            margin: 2.5rem;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <div></div>
+</body>
+</html>

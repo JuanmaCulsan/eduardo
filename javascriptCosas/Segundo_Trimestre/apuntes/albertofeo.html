@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload=function(){
+            var botones = document.querySelectorAll('input[type="button"]');
+            botones[0].setAttribute("onclick","enviar()");
+            botones[1].setAttribute("onclick","borrar()");
+
+            var p = document.querySelector("p");
+
+            if(!localStorage.datos){
+                p.textContent="Aqui no hay nada primo"
+            }
+            else{
+                var objeto = JSON.parse(localStorage.datos);
+                var texto = "<b>Datos Almacenados</b><br>"
+                for (let ind in objeto) {
+                    texto +=ind+": "+objeto[ind]+"<br>";
+                }
+                p.innerHTML=texto;
+            }
+        }
+
+        function enviar(){
+            var f = document.querySelector("form");
+            var nombre = f.nombre.value;
+            var clave = f.clave.value;
+            if(nombre==""){
+                alert("No puedes dejar el campo nombre vacio")
+                nombre.focus();  
+            }
+            else if(clave==""){
+                alert("No puedes dejar el campo clave vacio")
+                clave.focus();
+            }
+            else{
+                var objetodatos = {
+                    nombre: f.nombre.value,
+                    clave: f.clave.value
+                }
+                localStorage.datos = JSON.stringify(objetodatos);
+            }
+            var p = document.querySelector("p");
+            p.textContent="guardando porros";
+        }
+
+        function borrar(){
+            localStorage.removeItem("datos");
+            document.querySelector("p").textContent="datos borrados";
+        }
+    </script>
+</head>
+<body>
+    <form action="">
+        <input type="text" name="nombre" id="nombre">
+        <input type="text" name="clave" id="clave">
+        <input type="button" value="Aceptar">
+        <div>
+            <p>Hola soy un parrafo</p>
+        </div>
+        <input type="button" value="Borrar">
+    </form>
+</body>
+</html>

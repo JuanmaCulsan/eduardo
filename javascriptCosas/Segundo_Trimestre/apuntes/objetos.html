@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var tutor1 = {
+            nombre:"jaime",
+            edad:35,
+            DNI:"12345678K",
+            titulo:"Fiestero",
+        }
+
+        var tutor2 ={
+            nombre: "Jaime",
+            edad: 40,
+            dni: "87654321C",
+            titulo_uni: "Ingeniería de software"
+        }
+
+        var asignaturas = [ 
+            {
+                nombre: "Desarrollo en entorno de servidores",
+                curso: 2,
+                num_horas: 300
+            },
+            {
+                nombre: "Desarrollo en entorno de clientes",
+                curso: 2,
+                num_horas: 300
+            },
+            {
+                nombre: "Despliegue de aplicaciones web",
+                curso: 2,
+                num_horas: 150
+            },
+            {
+                nombre: "Diseño de interfaces",
+                curso: 2,
+                num_horas: 300
+            }
+        ];
+
+        var alumno = {
+            nombre: "juan",
+            edad: 23,
+            ciclo: "daw",
+            curso: 1,
+            tutor: tutor1,
+            asignaturas: asignaturas,
+            notas: [9,8.75,6.5,10]
+        }
+
+        window.onload=function(){
+            
+            var boton = document.createElement("input");
+            boton.setAttribute("type","button");
+            boton.value="Datos del Tutor";
+            
+            var nuevo = document.createElement("div");
+            document.querySelector("section").appendChild(nuevo);
+
+            for (let campo in alumno) {
+                let span = document.createElement("span");
+                let texto;
+                
+                if(campo == "tutor"){
+                    let trozos="";
+                    for (let dato in alumno[campo]) {
+                        console.log(alumno[campo]);
+                        //trozos+= alumno[campo][dato]+" ";
+                        if(alumno[campo][dato]==alumno[campo].nombre){
+                            trozos+= alumno[campo][dato];
+                        }
+                    }
+                    texto = document.createTextNode(trozos);
+                }
+                else if(campo == "asignaturas"){
+                    let trozos="";
+                    for (let ind of alumno[campo]) {
+                        console.log(ind.nombre);
+                        trozos+= ind.nombre+" ";
+                    }
+                    texto = document.createTextNode(trozos);
+                }
+                else if(campo=="notas"){
+                    let suma=0;
+                    let numeroTotal=alumno[campo].length;
+                    for (let ite of alumno[campo]) {
+                        suma+=ite;
+                    }
+                    var media = suma/numeroTotal;
+                    var trozos = "la media es "+media;
+                    texto = document.createTextNode(trozos);
+
+                }   
+                else{
+                    texto = document.createTextNode(alumno[campo]);
+                }
+                span.appendChild(texto);
+                nuevo.appendChild(span);
+
+            }
+            nuevo.appendChild(boton);
+
+        }
+
+
+    </script>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        section{
+            width: 50%;
+            padding: 1em;
+            border: 2px solid rgb(5, 31, 75);
+            background-color: rgb(73, 87, 112);
+            box-shadow: 5px 5px 5px gray;
+            display: flex;
+            align-content: center;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        section span{
+            color: white;
+            font-size: 1.25em;
+            font-weight: bold;
+            padding: 0.5em;
+            background-color: rgb(0, 0, 0);
+            margin: 2em;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <section>
+    </section>
+</body>
+</html>

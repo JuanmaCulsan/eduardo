@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--CAE EN TEORIA!!!!!!!!!!!!
+
+        FLUJO DE EVENTOS
+
+        Fase de burbuja
+        grupo de burbuja o fase de burbuja va del más específico al más genérico
+        div -> p -> b se ejecutan del especifíco es decir el b al más genérico que es el div.
+
+        Fase de captura
+        va del más genérico al más específico
+        div -> p -> b se ejecuta primero el div hasta el más específico que es el b
+
+        Por defecto primero se captura el burbuja
+
+        CUANDO HAY MEZCLA DE AMBAS
+        el orden de ejecución:
+            1.- Primero todos los de captura
+            2.- Todos los de burbuja
+
+        
+    -->
+
+    <!--
+        LISTENERS
+
+        Existen unas funciones de asociar eventos a elementos de mi páginas
+
+        1.- Atributo de HTML
+        <p onclick="mostrar()"></p>
+
+        2.- var dedo = document.querySelector("p")-
+            dedo.onclick=function(){
+                alert("haha si");
+            }
+
+            ....
+
+            dedo.onclick=function(){
+                alert("adios");
+            }
+
+            //sale la segunda porque sobreescribe la primera
+
+        AHORA SI LOS LISTENERS
+
+        addEventListener asocia un evento a un elemento.
+
+        removeEventListener elimina un evento asociado a un elemento.
+
+        3.- var dedo = document.querySelector("p");
+            NO EXISTE LOS EVENTO CON ON- 
+            dedo.addEventListener("click", function(){
+                alert("hola");
+            },false);
+
+            El ultimo parametro es un booleano
+                false: de burbuja
+                true: de captura
+
+            dedo.addEventListener("click", function(){
+                alert("deu");
+            });
+
+            Ahora primero se ejecuta una y después otra
+
+            puedo añadir funcionalidad al mismo evento sin perder la anterior.
+
+            
+            Puedo eliminar funciones manejadoras de ventos
+            dedo.removeEventListener("click",function(){
+                alert("hola");
+                },false);
+
+                var funcion = function(){
+                    alert("hola")
+                }
+            dedo.removeEventListener("click",funcion);
+
+        OBJETO EVENT
+        
+        Esta solo funciona con eventos onkeydow o onkeyup
+        nada.altKey onkeyup onkeydow
+        nada.ctrlKey onkeyup onkeydow
+        nada.stopPropagation();//para automaticamente el flujo de evento. EJEMPLo si tengo dos eventlistener asociados a dedo. meto el nada.stopPropagation para el flujo de captura/burbuja
+
+        nada.preventDefault() evitar que el elemento se ejecute por defecto. EJEMPLO: te cargas la funcionalidad por defecto de un evento 
+
+        nada.charCode() (con el evento onKeypress) para saber el codigo unicode de la tecla pulsada. 
+
+        nada.buttons() (onmousedown)
+
+        EJEMPLO:
+
+        document.body.onkeydown=function(e){
+            if(e.altkey){
+                console.log("se ha pulsado alt");
+            }
+            if(e.charCode==44){
+                console.log("lel");
+            }
+        }
+
+        document.body.onmousemove=function(e){
+            La parte visible del navegador
+            e.pagex
+            e.pagey
+
+            la parte completa incluso con scroll
+            e.clientx
+            e.clienty
+
+            jaime usa esta dice
+            e.screenx
+            e.screeny
+        }
+
+        dedo.onclick= function(nada)
+
+        
+
+        dedo.addEventListener()
+    -->
+    <style>
+        html{
+            width: max-content;
+            height: max-content;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>
+            <b>PULSA AQUI</b>
+        </p>
+    </div>
+</body>
+</html>
+
+<script>
+    window.onload = function(){
+        var body = document.querySelector("html");
+        var textarea = document.createElement("textarea");
+        body.appendChild(textarea);
+        var b = document.querySelector("b");
+        var p = document.querySelector("p");
+        var div = document.querySelector("div");
+
+        b.addEventListener("click", function(){
+            alert("soy B")
+        })
+
+        p.addEventListener("click", function(){
+            alert("soy P")
+        })
+
+        div.addEventListener("click", function(){
+            alert("soy Div")
+        })
+
+        body.addEventListener("mousemove",function(e){
+            textarea.textContent=e.screenX+" , "+e.screenY
+        })
+    }
+</script>

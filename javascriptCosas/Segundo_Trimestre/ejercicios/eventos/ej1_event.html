@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        section{
+            width: 500px;
+            height: 200px;
+            background-color: tomato;
+            border-radius: 15px;
+            border: 1px solid black;
+            padding: 2.5rem;
+        }
+        p{  
+            width: 500px;
+            height: 100px;
+            background-color: turquoise;
+            border-radius: 15px;
+            padding: 2.5;
+        }
+        a{  
+            text-decoration: none;
+            color: rgb(206, 250, 8);
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var sec = document.querySelector("section");
+            var p = document.querySelector("p");
+            var a= document.querySelector("a");
+
+            sec.addEventListener("click",function(){
+                sec.style.backgroundColor="white";
+            })
+
+            p.addEventListener("click",function(){
+                p.style.width="300px";
+            })
+
+            a.addEventListener("click",function(e){
+                confirm("Que bien todo");
+                e.stopPropagation();
+            },true)
+        }
+    </script>
+</head>
+<body>
+    <section>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis obcaecati sit labore<a href="https://medac.instructure.com/">al insti</a> facilis, laboriosam ducimus ratione, inventore ullam sapiente modi doloremque iusto est molestiae! Iure perferendis dolores et doloremque numquam.
+            
+        </p>
+    </section>
+</body>
+</html>
