@@ -43,10 +43,7 @@ var nombre;
 localStorage.hola = "casa";
 localStorage.repe = nombre;
 
-
 localStorage["hola"]="Juanfran";
-
-
 localStorage.setItem('hola',"juanfran");
 
 /*
