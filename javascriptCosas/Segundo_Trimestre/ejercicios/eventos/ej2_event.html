@@ -14,9 +14,15 @@
                 divs[0].textContent=e.screenX+" , "+e.screenY;
             })
             
-            html.addEventListener('contexmenu',(e)=>{
+            html.addEventListener("contextmenu",(e)=>{
                 e.preventDefault();
+                
             });
+
+            html.addEventListener("contextmenu",(e)=> {
+                divs[1].textContent=e.screenX+" , "+e.screenY;
+            })
+            
             
         }
     </script>

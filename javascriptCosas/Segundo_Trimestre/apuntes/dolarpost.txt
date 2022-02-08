@@ -1,0 +1,9 @@
+$_POST
+
+NOMBRE [___]
+PASS   [___]
+EDAD   [___]
+EMAIL  [___]
+
+
+echo $_POST['age'];
