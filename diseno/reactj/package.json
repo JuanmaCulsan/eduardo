@@ -1,20 +1,28 @@
 {
-  "name": "reactj",
+  "name": "react-buttons-and-tabs",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "description": "React Button demo with theme, disabled, link button, toggle, and tabs. ",
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "main": "src/index.js",
   "dependencies": {
-    "express": "^4.17.2",
-    "morgan": "^1.10.0",
-    "react-router": "^6.2.1"
+    "react": "16.12.0",
+    "react-dom": "16.12.0",
+    "react-scripts": "3.0.1",
+    "styled-components": "5.0.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.15"
-  }
+    "typescript": "3.3.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
