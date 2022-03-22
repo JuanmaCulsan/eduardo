@@ -40,7 +40,7 @@ localStorage()
 */
 var nombre;
 
-localStorage.hola = "casa";
+localStorage.hola = "felipe";
 localStorage.repe = nombre;
 
 localStorage["hola"]="Juanfran";
